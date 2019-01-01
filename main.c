@@ -5,14 +5,15 @@
 #include "model/list/list.h"
 #include "model/destination/destination.h"
 
-#define PATH "data/mainDatabase.nymal"
+#define PATH "C:\\Users\\jasji\\Documents\\2018-2019\\PdP I\\AC2\\Trip-Organizer-NJ\\data\\mainDatabase.nymal"
+//#define PATH "data/mainDatabase.nymal"
 
 int main() {
 	int option;
 
 	FILE* f = fopen(PATH, "r");
 
-	if (f = NULL) {
+	if (f == NULL) {
 		printFileError(PATH);
 		return -1;
 	}
