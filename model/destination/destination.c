@@ -177,7 +177,7 @@ char * readString(FILE * file) {
 
 	fscanf(file, "%c", &tmp);
 	do {
-		i++[ret] = tmp;
+		ret[i++] = tmp;
 
 		if (i >= size) {
 			size *= 2;
@@ -188,6 +188,7 @@ char * readString(FILE * file) {
 
 	resize(&ret, i + 1);
 
+	ret[i] = '\0';
 
 	return ret;
 }
