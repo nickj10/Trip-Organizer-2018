@@ -26,6 +26,7 @@ int main() {
 	printWelcomeLine();
 
 	do {
+        setbuf(stdout, 0);
 		printMenu();
 
 		do {
