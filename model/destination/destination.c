@@ -153,6 +153,7 @@ char ** mapAltitudeTravel(Destination dest) {
 		for (j = 0; j < dest.n + 2; j++) {
 			map[i][j] = '#';
 		}
+		map[i][j] = '\0';
 	}
 
 	mapAltitude(dest.travelAltitude, map, 0, 0, dest.n);
