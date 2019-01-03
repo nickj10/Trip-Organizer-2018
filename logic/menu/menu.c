@@ -46,7 +46,7 @@ char * readUserString() {
 
 	scanf("%c", &tmp);
 	do {
-		i++[ret] = tmp;
+		ret[i++] = tmp;
 
 		if (i >= size) {
 			size *= 2;
@@ -56,6 +56,8 @@ char * readUserString() {
 	} while (tmp != '\n');
 
 	resize(&ret, i + 1);
+
+    ret[i] = '\0';
 
 	return ret;
 }
