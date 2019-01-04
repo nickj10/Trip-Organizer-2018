@@ -162,11 +162,11 @@ char ** mapAltitudeTravel(Destination dest) {
 }
 
 // Allibera tota la memòria d'una destinació
-void freeAll(Destination dest) {
-	free(dest.name);
-	free(dest.country);
-	free(dest.hotelPrices);
-	free(dest.travelAltitude);
+void freeAll(Destination * dest) {
+	free(dest->name);
+	free(dest->country);
+	free(dest->hotelPrices);
+	free(dest->travelAltitude);
 }
 
 char * readString(FILE * file) {
