@@ -161,7 +161,7 @@ void destroy(List * l) {
 
 	while (!isEmpty(*l)) {
 		for (i = 0; i < MAX_SORTING; i++) {
-			freeAll(l->poi[i]->dest);
+			freeAll(&(l->poi[i]->dest));
 		}
 		removePoi(l, 0);
 	}
